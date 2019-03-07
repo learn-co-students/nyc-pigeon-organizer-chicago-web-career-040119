@@ -58,7 +58,7 @@ def nyc_pigeon_organizer(data)
   data.each do |key, details|
     details.each do |attribute, array_of_names|
       array_of_names.each do |name|
-        if pigeon_list[name] == nil
+        if pigeon_list[name].nil?
            pigeon_list[name] = {}
            pigeon_list[name][:color] = []
         end
