@@ -16,7 +16,7 @@ pigeon_data = {
   }
 }
 
-def nyc_pigeon_organizer(pigeon_listdata)
+def nyc_pigeon_organizer(pigeon_data)
   pigeon_list = {}
   pigeon_data.each do |key, details|
     details.each do |attribute, array_of_names|
