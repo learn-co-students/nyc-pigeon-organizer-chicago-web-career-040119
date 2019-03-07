@@ -18,9 +18,9 @@ data = {
 
 def nyc_pigeon_organizer(data)
   pigeon_list = {}
-  data.each do |key, details|                           # :color => {:purple => ["Theo", "Peter Jr.", "Lucky"]}
-    details.each do |attribute, array_of_names|
-      array_of_names.each do |name|
+  data.each do |key, details|                           # :color => {:purple => ["Theo", "Peter Jr.", "Lucky"]} etc
+    details.each do |attribute, array_of_names|         # :purple => ["Theo", "Peter Jr.", "Lucky"] etc
+      array_of_names.each do |name|                      #["Theo", "Peter Jr.", "Lucky"]
         if !pigeon_list.has_key?(name)
            pigeon_list[name] = {}
         end
