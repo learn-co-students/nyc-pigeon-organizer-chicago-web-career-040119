@@ -1,4 +1,4 @@
-pigeon_data = {
+data = {
   :color => {
     :purple => ["Theo", "Peter Jr.", "Lucky"],
     :grey => ["Theo", "Peter Jr.", "Ms. K"],
@@ -17,24 +17,21 @@ pigeon_data = {
 }
 
 def nyc_pigeon_organizer(data)
-  # write your code here!
-  new_hash = {}
-  data.each do |property, hash|
-    hash.each do |attribute, array|
-      array.each do |name|
-        if !new_hash.has_key?(name)
-          new_hash[name] = {}
+  pigeon_list = {}
+  pigeon_data.each do |key, details|
+    details.each do |attribute, array_of_names|
+      array_of_names.each do |name|
+        if !pigeon_list.has_key?(name)
+           pigeon_list[name] = {}
         end
-
-        if !new_hash[name].has_key?(property)
-          new_hash[name][property] = []
+        if !pigeon_list.has_key?(key)
+           pigeon_list[name][key] = []
         end
-
-        if !new_hash[name][property].include?(attribute)
-          new_hash[name][property] << attribute.to_s
+        if !pigeon_list[name][key].include?(attribute)
+          pigeon_list[name][key] << attribute.to_s
         end
       end
     end
   end
-  new_hash
+  pigeon_list
 end
