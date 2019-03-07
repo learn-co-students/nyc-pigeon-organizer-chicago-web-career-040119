@@ -70,7 +70,7 @@ pigeons.each do |key, hash|
         pigeons2[name][key] << attribute
       else
         #otherwise assign the key(:lives or :gender) to pigeons2 hash and set it equal to the value of that attribute
-        #convert attributes to string!!!!! yayyyyyyyyy! 
+        #convert attributes to string!!!!! yayyyyyyyyy!
         pigeons2[name][key] = attribute.to_s
       end
     end
