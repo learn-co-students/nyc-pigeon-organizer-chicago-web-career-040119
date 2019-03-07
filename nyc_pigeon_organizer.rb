@@ -62,13 +62,13 @@ def nyc_pigeon_organizer(data)
         if pigeon_list[name] == nil
            pigeon_list[name] = {}
            pigeon_list[name][:color] = []
-        end 
+        end
         if key == :color
           pigeon_list[name][key] << attribute
-        else 
+        else
           pigeon_list[name][key] = attribute.to_s
-        end 
-      end 
-    end 
-  end 
+        end
+      end
+    end
+  end
 end
