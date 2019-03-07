@@ -29,7 +29,7 @@ def nyc_pigeon_organizer(data)
            pigeon_list[name][key] = []                  # "Theo" => {:color =>[]} etc
         end
         if !pigeon_list[name][key].include?(attribute)
-          pigeon_list[name][key] << attribute.to_s
+          pigeon_list[name][key] << attribute.to_s       # "Theo" => {:color => ["purple", "gray"]} etc 
         end
       end
     end
