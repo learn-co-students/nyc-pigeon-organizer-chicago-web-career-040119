@@ -27,12 +27,11 @@ def nyc_pigeon_organizer(pigeon_data)
         if !pigeon_list.has_key?(key)
            pigeon_list[name][key] = []
         end
-        if key == :color
-          pigeon_list[name][key] << attribute
-        else
-          pigeon_list[name][key] = attribute.to_s
+        if !pigeon_list.include?(attribute)
+          pigeon_list[name][key] << attribute.to_s
         end
       end
     end
   end
+  pigeon_list
 end
