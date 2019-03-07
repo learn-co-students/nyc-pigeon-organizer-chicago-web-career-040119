@@ -22,7 +22,7 @@ def nyc_pigeon_organizer(data)
     details.each do |attribute, array_of_names|         # :purple => ["Theo", "Peter Jr.", "Lucky"] etc
       array_of_names.each do |name|                     # ["Theo", "Peter Jr.", "Lucky"]
         if !pigeon_list.has_key?(name)
-           pigeon_list[name] = {}                       # "Theo" => {}
+           pigeon_list[name] = {}                       # "Theo" => {} etc 
         end
         if !pigeon_list.has_key?(key)
            pigeon_list[name][key] = []
